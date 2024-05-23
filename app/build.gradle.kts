@@ -1,6 +1,8 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.devToolsKsp)
+    alias(libs.plugins.hiltDagger)
 }
 
 android {
@@ -40,6 +42,13 @@ android {
 
 dependencies {
 
+    // dagger hilt
+    implementation(libs.hiltAndroid)
+    ksp(libs.hiltCompiler)
+    implementation(libs.dagger)
+    ksp(libs.daggerCompiler)
+
+    implementation(project(":presentation"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
