@@ -44,9 +44,15 @@ dependencies {
 
     // dagger hilt
     implementation(libs.hiltAndroid)
+    implementation(project(":data"))
+    implementation(project(":domain"))
     ksp(libs.hiltCompiler)
     implementation(libs.dagger)
     ksp(libs.daggerCompiler)
+
+    // retrofit
+    implementation(libs.retrofit2)
+    implementation(libs.moshi.converter)
 
     implementation(project(":presentation"))
     implementation(libs.androidx.core.ktx)

@@ -1,1 +1,36 @@
-<resources></resources>
+<resources>
+    <string name="stringFlights">Авиабилеты</string>
+    <string name="stringHotels">Отели</string>
+    <string name="stringShort">Короче</string>
+    <string name="stringSubscriptions">Подписки</string>
+    <string name="stringProfile">Профиль</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stringSlogan">Поиск дешевых авиабилетов</string>
+    <string name="stringSearch">search</string>
+    <string name="stringHintWhere">Откуда - Москва</string>
+    <string name="stringHintTo">Куда - Турция</string>
+    <string name="stringTabText">Музыкально отлететь</string>
+    <string name="stringMinPrice">От %d ₽</string>
+    <string name="stringPriceFormat">%d ₽</string>
+    <string name="stringAnywhere">Куда угодно</string>
+    <string name="stringHardRoute">Сложный маршрут</string>
+    <string name="stringHotTickets">Горячие билеты</string>
+    <string name="stringWeekend">Выходные</string>
+    <string name="stringIstanbul">Стамбул</string>
+    <string name="stringPopularDestination">Популярное направление</string>
+    <string name="stringSochi">Сочи</string>
+    <string name="stringPhuket">Пхукет</string>
+    <string name="stringInputError">Заполните поля</string>
+    <string name="stringJoke">Шутка! Африка. Идёт путешественник черех джунгли. Вдруг из-за кустов толпа негров, окружают, вяжут, несут к вождю. Вождь грозно говорит:"Ну что, воин? Смерть или Матумба?" Мужик думает: ну смерть - это мы всегда успеем, а что такое Матумба? и отвечает вождю: "Матумба". Из толпы выходит ОГРОМНЫЙ негр и при всём племени, как бы это повежливее выразиться, жестоко прессует несчастного путешественника, после чего его отпускают. Месяц спустя. Тот же чувак идёт по тем же джунглям обратно. Снова толпа дикарей, опять хватают и к вождю. "Ну, воин? Смерть или Матумба?" Мужик сразу же: " Смерть!!!". "Ты храбрый воин… СМЕРТЬ ЧЕРЕЗ МАТУМБУ!!!"</string>
+    <string name="stringBack">Обратно</string>
+    <string name="stringTempDate">24 фев, сб</string>
+    <string name="stringTempType">1, эконом</string>
+    <string name="stringFilters">Фильтры</string>
+    <string name="stringDirectFlights">Прямые рейсы</string>
+    <string name="stringShowAll">Показать все</string>
+    <string name="stringWatchAllTickets">Посмотреть все билеты</string>
+    <string name="stringWhereToType">%s-%s</string>
+    <string name="split">/</string>
+    <string name="stringLongDash">—</string>
+</resources>
