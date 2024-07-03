@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ShortApp"
 include(":app")
+include(":core")
