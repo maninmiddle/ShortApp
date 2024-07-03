@@ -1,4 +1,4 @@
-package com.maninmiddle.feature_flights.presentation.fligts
+package com.maninmiddle.feature_flights.presentation.flights
 
 import com.maninmiddle.feature_flights.domain.model.OfferItem
 

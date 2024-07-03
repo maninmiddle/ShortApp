@@ -1,4 +1,4 @@
-package com.maninmiddle.feature_flights.presentation.fligts
+package com.maninmiddle.feature_flights.presentation.flights
 
 import android.content.Context
 import android.os.Bundle
@@ -19,6 +19,7 @@ import com.maninmiddle.feature_flights.R
 import com.maninmiddle.feature_flights.databinding.BottomSheetLayoutBinding
 import com.maninmiddle.feature_flights.databinding.FragmentFlightsBinding
 import com.maninmiddle.feature_flights.presentation.adapters.OfferAdapter
+import com.maninmiddle.feature_tickets_offer.presentation.tickets_offer.TicketsOfferFragment
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel

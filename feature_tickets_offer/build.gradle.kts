@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.maninmiddle.feature_flights"
+    namespace = "com.maninmiddle.feature_tickets_offer"
     compileSdk = 34
 
     defaultConfig {
@@ -36,14 +36,14 @@ android {
 }
 
 dependencies {
+
     implementation(libs.koin.core)
     implementation(libs.koin.android)
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(project(":core"))
-    implementation(project(":feature_tickets_offer"))
+    implementation(project(":feature_tickets"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

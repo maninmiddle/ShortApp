@@ -2,6 +2,9 @@ package com.maninmiddle.shortapp.app
 
 import android.app.Application
 import com.maninmiddle.core.di.networkModule
+import com.maninmiddle.feature_flights.di.flightsModule
+import com.maninmiddle.feature_tickets.di.ticketsModule
+import com.maninmiddle.feature_tickets_offer.di.ticketsOfferModule
 import com.maninmiddle.shortapp.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -14,7 +17,13 @@ class App : Application() {
         startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@App)
-            modules(appModule, networkModule)
+            modules(
+                appModule,
+                networkModule,
+                ticketsModule,
+                ticketsOfferModule,
+                flightsModule
+            )
         }
     }
 }

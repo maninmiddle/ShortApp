@@ -1,4 +1,4 @@
-package com.maninmiddle.feature_flights.presentation.fligts
+package com.maninmiddle.feature_flights.presentation.flights
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

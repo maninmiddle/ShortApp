@@ -1,0 +1,10 @@
+<resources>
+    <string name="stringBack">Обратно</string>
+    <string name="stringTempDate">24 фев, сб</string>
+    <string name="stringTempType">1, эконом</string>
+    <string name="stringFilters">Фильтры</string>
+    <string name="stringDirectFlights">Прямые рейсы</string>
+    <string name="stringShowAll">Показать все</string>
+    <string name="stringWatchAllTickets">Посмотреть все билеты</string>
+    <string name="stringPriceFormat">%d ₽</string>
+</resources>
