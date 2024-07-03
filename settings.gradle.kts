@@ -23,3 +23,4 @@ rootProject.name = "ShortApp"
 include(":app")
 include(":core")
 include(":feature_flights")
+include(":feature_tickets")

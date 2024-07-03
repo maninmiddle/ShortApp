@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/tdp"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+
+        app:cardBackgroundColor="@color/colorGrey2"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="6 990 ₽" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvCircle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:cardBackgroundColor="@color/colorRed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvPrice"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice"
+                app:strokeWidth="0dp" />
+
+
+            <TextView
+                android:id="@+id/tvStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/cvCircle"
+                app:layout_constraintStart_toEndOf="@id/cvCircle"
+                app:layout_constraintTop_toTopOf="@id/cvCircle"
+                tools:text="3:15" />
+
+            <TextView
+                android:id="@+id/departureAirport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tvStartTime"
+                app:layout_constraintTop_toBottomOf="@id/tvStartTime"
+                tools:text="VKO" />
+
+            <TextView
+                android:id="@+id/tvLongDash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/stringLongDash"
+                android:textColor="@color/colorGrey5"
+                app:layout_constraintEnd_toStartOf="@id/tvEndTime"
+                app:layout_constraintStart_toEndOf="@id/tvStartTime"
+                app:layout_constraintTop_toTopOf="@id/tvStartTime" />
+
+            <TextView
+                android:id="@+id/tvEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/tvLongDash"
+                app:layout_constraintTop_toTopOf="@id/tvLongDash"
+                tools:text="7:10" />
+
+            <TextView
+                android:id="@+id/arrivalAirport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tvEndTime"
+                app:layout_constraintTop_toBottomOf="@id/tvEndTime"
+                tools:text="AER" />
+
+            <TextView
+                android:id="@+id/timeInRoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/tvEndTime"
+                app:layout_constraintTop_toTopOf="@id/tvEndTime"
+                tools:text="4 ч в пути" />
+
+            <TextView
+                android:id="@+id/tvSeparator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="@string/split"
+                android:textColor="@color/colorGrey5"
+                app:layout_constraintEnd_toStartOf="@id/tvHasTransfer"
+                app:layout_constraintStart_toEndOf="@id/timeInRoad"
+                app:layout_constraintTop_toTopOf="@id/timeInRoad" />
+
+            <TextView
+                android:id="@+id/tvHasTransfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/tvSeparator"
+                app:layout_constraintTop_toTopOf="@id/tvSeparator"
+                tools:text="Без пересадок" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvBadge"
+        android:layout_width="125dp"
+        android:layout_height="20dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/colorBlue"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@id/tdp"
+        app:layout_constraintStart_toStartOf="@id/tdp"
+        app:layout_constraintTop_toTopOf="@id/tdp"
+        app:strokeWidth="0dp">
+
+
+        <TextView
+            android:id="@+id/tvBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="Test test test" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

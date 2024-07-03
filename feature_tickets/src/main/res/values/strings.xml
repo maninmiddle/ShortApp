@@ -1,0 +1,7 @@
+<resources>
+    <string name="split">/</string>
+    <string name="stringLongDash">—</string>
+    <string name="stringPriceFormat">%d ₽</string>
+    <string name="stringWhereToType">%s-%s</string>
+    <string name="stringInfo">%s, 1 пассажир</string>
+</resources>
