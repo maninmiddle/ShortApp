@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.flights.FlightsFragment">
+
+    <TextView
+        android:id="@+id/tvSlogan"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/stringSlogan"
+        android:textAlignment="center"
+        android:textColor="#D9D9D9"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchBar"
+        android:layout_width="328dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="@color/colorGrey3"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="@id/tvSlogan"
+        app:layout_constraintStart_toStartOf="@id/tvSlogan"
+        app:layout_constraintTop_toBottomOf="@id/tvSlogan"
+        app:strokeWidth="0dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="296dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/colorGrey4"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="5dp"
+                    android:contentDescription="@string/stringSearch"
+                    android:src="@drawable/search_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etWhereInput"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@android:color/transparent"
+                    android:digits="абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+                    android:hint="@string/stringHintWhere"
+                    android:importantForAutofill="no"
+                    android:inputType="textImeMultiLine|textCapWords"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/colorGrey6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivSearch"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.8dp"
+                    android:background="@color/colorGrey5"
+                    app:layout_constraintEnd_toEndOf="@id/etWhereInput"
+                    app:layout_constraintStart_toStartOf="@id/etWhereInput"
+                    app:layout_constraintTop_toBottomOf="@id/etWhereInput" />
+
+                <EditText
+                    android:id="@+id/etToInput"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:digits="абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/stringHintTo"
+                    android:importantForAutofill="no"
+                    android:inputType="none"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/colorGrey6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivSearch"
+                    app:layout_constraintTop_toBottomOf="@id/etWhereInput" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tabText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/stringTabText"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchBar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLayout"
+        android:layout_width="0dp"
+        android:layout_height="215dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabText"
+        tools:listitem="@layout/offer_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

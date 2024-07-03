@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/search_bg"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:background="@drawable/pip_bg"
+        android:id="@+id/pip"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvSearch"
+        android:layout_height="96dp"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        app:cardBackgroundColor="@color/colorGrey3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pip"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+
+            <ImageView
+                android:id="@+id/ivPlane"
+                android:importantForAccessibility="no"
+                android:layout_height="24dp"
+                android:layout_margin="10dp"
+                android:layout_width="24dp"
+                android:src="@drawable/fly_plane_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etWhereInput" />
+
+            <EditText
+                android:background="@android:color/transparent"
+                android:digits="абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+                android:hint="@string/stringHintWhere"
+                android:id="@+id/etWhereInput"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textImeMultiLine"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="0dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/colorGrey6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivPlane"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:background="@color/colorGrey4"
+                android:id="@+id/separator"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/ivPlane"
+                app:layout_constraintTop_toBottomOf="@id/etWhereInput" />
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:importantForAccessibility="no"
+                android:layout_height="24dp"
+                android:layout_margin="10dp"
+                android:layout_width="24dp"
+                android:src="@drawable/white_search_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator" />
+
+            <EditText
+                android:background="@android:color/transparent"
+                android:digits="абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+                android:hint="@string/stringHintTo"
+                android:id="@+id/etToInput"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textImeMultiLine"
+                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/colorGrey6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivSearch"
+                app:layout_constraintTop_toBottomOf="@id/separator" />
+
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:importantForAccessibility="no"
+                android:layout_height="24dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="24dp"
+                android:src="@drawable/close_icon"
+                app:layout_constraintBottom_toBottomOf="@id/etToInput"
+                app:layout_constraintEnd_toEndOf="@id/etToInput"
+                app:layout_constraintTop_toTopOf="@id/etToInput" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvHardRoute"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="48dp"
+        app:cardBackgroundColor="@color/colorGreen"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toStartOf="@id/cvAnywhere"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvSearch"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:importantForAccessibility="no"
+            android:layout_gravity="center"
+            android:layout_height="24dp"
+            android:layout_width="24dp"
+            android:src="@drawable/hard_route_icon" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tvHardRoute"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_width="100dp"
+        android:text="@string/stringHardRoute"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/cvHardRoute"
+        app:layout_constraintStart_toStartOf="@id/cvHardRoute"
+        app:layout_constraintTop_toBottomOf="@id/cvHardRoute" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvAnywhere"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="48dp"
+        app:cardBackgroundColor="@color/colorBlue"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toStartOf="@id/cvWeekend"
+        app:layout_constraintStart_toEndOf="@id/cvHardRoute"
+        app:layout_constraintTop_toBottomOf="@id/cvSearch"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:importantForAccessibility="no"
+            android:layout_gravity="center"
+            android:layout_height="24dp"
+            android:layout_width="24dp"
+            android:src="@drawable/anywhere_icon" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_width="100dp"
+        android:text="@string/stringAnywhere"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/cvAnywhere"
+        app:layout_constraintStart_toStartOf="@id/cvAnywhere"
+        app:layout_constraintTop_toBottomOf="@id/cvAnywhere" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvWeekend"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="48dp"
+        app:cardBackgroundColor="@color/colorDarkBlue"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toStartOf="@id/cvHotTickets"
+        app:layout_constraintStart_toEndOf="@id/cvAnywhere"
+        app:layout_constraintTop_toBottomOf="@id/cvSearch"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:importantForAccessibility="no"
+            android:layout_gravity="center"
+            android:layout_height="24dp"
+            android:layout_width="24dp"
+            android:src="@drawable/weekend_icon" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_width="100dp"
+        android:text="@string/stringWeekend"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/cvWeekend"
+        app:layout_constraintStart_toStartOf="@id/cvWeekend"
+        app:layout_constraintTop_toBottomOf="@id/cvWeekend" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvHotTickets"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="48dp"
+        app:cardBackgroundColor="@color/colorRed"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cvWeekend"
+        app:layout_constraintTop_toBottomOf="@id/cvSearch"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:importantForAccessibility="no"
+            android:layout_gravity="center"
+            android:layout_height="24dp"
+            android:layout_width="24dp"
+            android:src="@drawable/hot_icon" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_width="100dp"
+        android:text="@string/stringHotTickets"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/cvHotTickets"
+        app:layout_constraintStart_toStartOf="@id/cvHotTickets"
+        app:layout_constraintTop_toBottomOf="@id/cvHotTickets" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvPopular"
+        android:layout_height="215dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_width="0dp"
+        app:cardBackgroundColor="@color/colorGrey3"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHardRoute"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clIstanbul"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                app:layout_constraintBottom_toTopOf="@id/clSochi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivIstanbul"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="40dp"
+                    android:src="@drawable/istanbul"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvIstanbul"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/stringIstanbul"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivIstanbul"
+                    app:layout_constraintTop_toTopOf="@id/ivIstanbul" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/stringPopularDestination"
+                    android:textColor="@color/colorGrey5"
+                    app:layout_constraintBottom_toBottomOf="@id/ivIstanbul"
+                    app:layout_constraintStart_toStartOf="@id/tvIstanbul" />
+
+                <View
+                    android:background="@color/colorGrey5"
+                    android:id="@+id/separator1"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/ivIstanbul"
+                    app:layout_constraintTop_toBottomOf="@id/ivIstanbul" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/clSochi"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clIstanbul">
+
+                <ImageView
+                    android:id="@+id/ivSochi"
+                    android:importantForAccessibility="no"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="40dp"
+                    android:src="@drawable/sochi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSochi"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/stringSochi"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivSochi"
+                    app:layout_constraintTop_toTopOf="@id/ivSochi" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/stringPopularDestination"
+                    android:textColor="@color/colorGrey5"
+                    app:layout_constraintBottom_toBottomOf="@id/ivSochi"
+                    app:layout_constraintStart_toStartOf="@id/tvSochi" />
+
+                <View
+                    android:background="@color/colorGrey5"
+                    android:id="@+id/separator2"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/ivSochi"
+                    app:layout_constraintTop_toBottomOf="@id/ivSochi" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPhuket"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clSochi">
+
+                <ImageView
+                    android:id="@+id/ivPhuket"
+                    android:importantForAccessibility="no"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="40dp"
+                    android:src="@drawable/phuket"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPhuket"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/stringPhuket"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivPhuket"
+                    app:layout_constraintTop_toTopOf="@id/ivPhuket" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/stringPopularDestination"
+                    android:textColor="@color/colorGrey5"
+                    app:layout_constraintBottom_toBottomOf="@id/ivPhuket"
+                    app:layout_constraintStart_toStartOf="@id/tvPhuket" />
+
+                <View
+                    android:background="@color/colorGrey5"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/ivPhuket"
+                    app:layout_constraintTop_toBottomOf="@id/ivPhuket" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <View
+        android:layout_height="130dp"
+        android:layout_width="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvPopular" />
+</androidx.constraintlayout.widget.ConstraintLayout>

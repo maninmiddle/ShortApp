@@ -1,6 +1,8 @@
 package com.maninmiddle.shortapp.app
 
 import android.app.Application
+import com.maninmiddle.core.di.networkModule
+import com.maninmiddle.shortapp.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -12,7 +14,7 @@ class App : Application() {
         startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@App)
-            modules()
+            modules(appModule, networkModule)
         }
     }
 }
